@@ -1,1 +1,6 @@
-# Revature_Training
+# technology
++ .net
++ visual studio
+
+# core team
++ jason goodell
