@@ -49,15 +49,55 @@ namespace MonsterApp.DataAccess
 
       public List<MonsterType> GetMonsterType()
       {
-         return new List<MonsterType>();
-         throw new NotImplementedException("todo");
-         
+         try
+         {
+            var ds = GetDataDisconnected("select * from Monster.MonsterType");
+            var monsterTypes = new List<MonsterType>();
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+               monsterTypes.Add(new MonsterType
+               {
+                  MonsterTypeId = int.Parse(row[0].ToString()),
+                  TypeName = row[1].ToString(),
+                  Active = bool.Parse(row[2].ToString())
+               });
+            }
+            return monsterTypes;
+
+         }
+         catch (Exception ex)
+         {
+
+            return null;
+         }
+
       }
 
       public List<Title> GetTitles()
       {
-         return new List<Title>();
-         throw new NotImplementedException("todo");
+         try
+         {
+            var ds = GetDataDisconnected("select * from Monster.Title");
+            var titles = new List<Title>();
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+               titles.Add(new Title
+               {
+                  titleId = int.Parse(row[0].ToString()),
+                  titleName = row[1].ToString(),
+                  Active = bool.Parse(row[2].ToString())
+               });
+            }
+            return titles;
+
+         }
+         catch (Exception ex)
+         {
+
+            return null;
+         }
       }
 
       #endregion
