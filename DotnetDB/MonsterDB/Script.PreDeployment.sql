@@ -28,7 +28,3 @@ if (schema_id(N'Monster') is not null)
 begin
    drop schema Monster
 end
-
-
-
-
