@@ -36,7 +36,7 @@ namespace MonsterApp.DataAccess
             return genders;
 
          }
-         catch (Exception)
+         catch (Exception ex)
          {
 
             return null;
@@ -49,11 +49,14 @@ namespace MonsterApp.DataAccess
 
       public List<MonsterType> GetMonsterType()
       {
+         return new List<MonsterType>();
          throw new NotImplementedException("todo");
+         
       }
 
       public List<Title> GetTitles()
       {
+         return new List<Title>();
          throw new NotImplementedException("todo");
       }
 

@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{12CE4E8E-5D8E-4BFA-B5B1-A2A5B5A5F689}</ProjectGuid>
+    <ProjectGuid>{36E3E557-FA6E-4A45-8A09-13C801084866}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonsterApp.DataAccess</RootNamespace>
-    <AssemblyName>MonsterApp.DataAccess</AssemblyName>
+    <RootNamespace>MonsterApp.Tests</RootNamespace>
+    <AssemblyName>MonsterApp.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,11 +59,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdoData.cs" />
-    <Compile Include="Models\Gender.cs" />
-    <Compile Include="Models\MonsterType.cs" />
+    <Compile Include="AdoDataTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Title.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonsterApp.DataAccess\MonsterApp.DataAccess.csproj">
+      <Project>{12ce4e8e-5d8e-4bfa-b5b1-a2a5b5a5f689}</Project>
+      <Name>MonsterApp.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
