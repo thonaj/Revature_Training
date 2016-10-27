@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MonsterApp.DataAccess
 {
-   public class AdoData
+   public partial class AdoData
    {
       private string connectionstring = ConfigurationManager.ConnectionStrings["MonsterDB"].ConnectionString;
 

@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdoData.cs" />
+    <Compile Include="AdoDataInsert.cs" />
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\MonsterType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
