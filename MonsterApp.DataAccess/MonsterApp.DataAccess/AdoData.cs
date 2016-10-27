@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MonsterApp.DataAccess
 {
    public partial class AdoData
@@ -28,7 +29,8 @@ namespace MonsterApp.DataAccess
             {
                genders.Add(new Gender
                {
-                  GenderID = int.Parse(row[0].ToString()),
+                  GenderId = int.Parse(row[0].ToString()),
+                  
                   GenderName = row[1].ToString(),
                   Active = bool.Parse(row[2].ToString())
                });
@@ -85,8 +87,8 @@ namespace MonsterApp.DataAccess
             {
                titles.Add(new Title
                {
-                  titleId = int.Parse(row[0].ToString()),
-                  titleName = row[1].ToString(),
+                  TitleId = int.Parse(row[0].ToString()),
+                  TitleName = row[1].ToString(),
                   Active = bool.Parse(row[2].ToString())
                });
             }

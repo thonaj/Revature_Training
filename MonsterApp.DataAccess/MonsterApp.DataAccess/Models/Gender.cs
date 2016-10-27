@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonsterApp.DataAccess
+namespace MonsterApp.DataAccess.Models
 {
    /// <summary>
    /// monster gender

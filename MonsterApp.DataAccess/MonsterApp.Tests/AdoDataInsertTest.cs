@@ -12,11 +12,12 @@ namespace MonsterApp.Tests
    {
       private Gender gender;
       private MonsterType type;
-      private Title;
+      private Title title;
       public AdoDataTests()
       {
          gender = new Gender() { GenderName = "Test Gender" };
-         type = 
+         type = new MonsterType() { TypeName= "Test Type"};
+         title = new Title() { TitleName= "test title"};
       }
       [Fact]
       public void Test_InsertGender()
@@ -25,6 +26,19 @@ namespace MonsterApp.Tests
          var actual = data.insertGender(gender);
          Assert.True(actual);
       }
-
+      [Fact]
+      public void Test_InsertMonsterType()
+      {
+         var data = new AdoData();
+         var actual = data.insertMonsterType(type);
+         Assert.True(actual);
+      }
+      [Fact]
+      public void test_InsertTitle()
+      {
+         var data = new AdoData();
+         var actual = data.insertMonsterTitle(title);
+         Assert.True(actual);
+      }
    }
 }
