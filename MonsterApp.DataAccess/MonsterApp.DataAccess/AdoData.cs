@@ -120,5 +120,30 @@ namespace MonsterApp.DataAccess
 
          return ds;
       }
-   }
+      public List<Gender> Getlatestgender()
+      {
+         try
+         {
+            var ds = GetDataDisconnected("select * from Monster.Gender where max(GenderId)");
+            var genders = new List<Gender>();
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+               genders.Add(new Gender
+               {
+                  GenderId = int.Parse(row[0].ToString()),
+
+                  GenderName = row[1].ToString(),
+                  Active = bool.Parse(row[2].ToString())
+               });
+            }
+            return genders;
+
+         }
+         catch (Exception ex)
+         {
+
+            return null;
+         }
+      }
 }
