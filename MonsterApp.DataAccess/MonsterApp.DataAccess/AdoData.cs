@@ -82,7 +82,6 @@ namespace MonsterApp.DataAccess
          {
             var ds = GetDataDisconnected("select * from Monster.Title");
             var titles = new List<Title>();
-
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                titles.Add(new Title
@@ -93,11 +92,9 @@ namespace MonsterApp.DataAccess
                });
             }
             return titles;
-
          }
          catch (Exception ex)
          {
-
             return null;
          }
       }

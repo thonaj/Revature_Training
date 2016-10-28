@@ -76,62 +76,62 @@
     <Compile Include="AdoDataUpdate.cs" />
     <Compile Include="Efdata.cs" />
     <Compile Include="Gender.cs">
-      <DependentUpon>MonsterEntity.tt</DependentUpon>
+      <DependentUpon>Monster.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\MonsterType.cs" />
+    <Compile Include="Monster.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Monster.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="Monster.cs">
-      <DependentUpon>MonsterEntity.tt</DependentUpon>
+      <DependentUpon>Monster.tt</DependentUpon>
     </Compile>
-    <Compile Include="MonsterEntity.Context.cs">
+    <Compile Include="Monster.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MonsterEntity.Context.tt</DependentUpon>
+      <DependentUpon>Monster.edmx</DependentUpon>
     </Compile>
-    <Compile Include="MonsterEntity.cs">
+    <Compile Include="Monster1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MonsterEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MonsterEntity.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MonsterEntity.edmx</DependentUpon>
+      <DependentUpon>Monster.tt</DependentUpon>
     </Compile>
     <Compile Include="MonsterType.cs">
-      <DependentUpon>MonsterEntity.tt</DependentUpon>
+      <DependentUpon>Monster.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Title.cs" />
     <Compile Include="Title.cs">
-      <DependentUpon>MonsterEntity.tt</DependentUpon>
+      <DependentUpon>Monster.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="MonsterEntity.edmx">
+    <EntityDeploy Include="Monster.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MonsterEntity.Designer.cs</LastGenOutput>
+      <LastGenOutput>Monster.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="MonsterEntity.edmx.diagram">
-      <DependentUpon>MonsterEntity.edmx</DependentUpon>
+    <None Include="Monster.edmx.diagram">
+      <DependentUpon>Monster.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MonsterEntity.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MonsterEntity.edmx</DependentUpon>
-      <LastGenOutput>MonsterEntity.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="MonsterEntity.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MonsterEntity.edmx</DependentUpon>
-      <LastGenOutput>MonsterEntity.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Monster.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Monster.edmx</DependentUpon>
+      <LastGenOutput>Monster.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Monster.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Monster.edmx</DependentUpon>
+      <LastGenOutput>Monster1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

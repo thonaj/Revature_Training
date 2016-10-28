@@ -14,10 +14,17 @@ namespace MonsterApp.DataAccess
     
     public partial class MonsterType
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public MonsterType()
+        {
+            this.Monsters = new HashSet<Monster>();
+        }
+    
         public int MonsterTypeId { get; set; }
         public string TypeName { get; set; }
         public bool Active { get; set; }
     
-        public virtual Monster Monster { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Monster> Monsters { get; set; }
     }
 }
