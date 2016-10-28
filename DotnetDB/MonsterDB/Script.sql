@@ -47,7 +47,7 @@ GO
 
 
 
-ALTER TABLE [Monster].[Monster]  ADD  CONSTRAINT [FK_Monster_MonsterType] FOREIGN KEY([MonsterId])
+ALTER TABLE [Monster].[Monster]  ADD  CONSTRAINT [FK_Monster_MonsterType] FOREIGN KEY([TypeId])
 REFERENCES [Monster].[MonsterType] ([MonsterTypeId])
 GO
 

@@ -40,4 +40,3 @@ namespace MonsterApp.Tests
 
 
 
-//User.CarType = mydb.CarType.Where(ct => ct.CarTypeID == 1).First();
