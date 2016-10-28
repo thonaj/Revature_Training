@@ -17,7 +17,7 @@ namespace MonsterApp.DataAccess
 
       #region methods
 
-      
+
       public List<Gender> GetGenders()
       {
          try
@@ -30,7 +30,7 @@ namespace MonsterApp.DataAccess
                genders.Add(new Gender
                {
                   GenderId = int.Parse(row[0].ToString()),
-                  
+
                   GenderName = row[1].ToString(),
                   Active = bool.Parse(row[2].ToString())
                });
@@ -45,8 +45,8 @@ namespace MonsterApp.DataAccess
          }
 
 
-         
-         
+
+
       }
 
       public List<MonsterType> GetMonsterType()
@@ -115,35 +115,36 @@ namespace MonsterApp.DataAccess
             cmd = new SqlCommand(query, connection);
             da = new SqlDataAdapter(cmd);
 
-            da.Fill(ds=new DataSet());
+            da.Fill(ds = new DataSet());
          }
 
          return ds;
       }
-      public List<Gender> Getlatestgender()
-      {
-         try
-         {
-            var ds = GetDataDisconnected("select * from Monster.Gender where max(GenderId)");
-            var genders = new List<Gender>();
+      //public List<Gender> Getlatestgender()
+      //{
+      //   try
+      //   {
+      //      var ds = GetDataDisconnected("select * from Monster.Gender where max(GenderId)");
+      //      var genders = new List<Gender>();
 
-            foreach (DataRow row in ds.Tables[0].Rows)
-            {
-               genders.Add(new Gender
-               {
-                  GenderId = int.Parse(row[0].ToString()),
+      //      foreach (DataRow row in ds.Tables[0].Rows)
+      //      {
+      //         genders.Add(new Gender
+      //         {
+      //            GenderId = int.Parse(row[0].ToString()),
 
-                  GenderName = row[1].ToString(),
-                  Active = bool.Parse(row[2].ToString())
-               });
-            }
-            return genders;
+      //            GenderName = row[1].ToString(),
+      //            Active = bool.Parse(row[2].ToString())
+      //         });
+      //      }
+      //      return genders;
 
-         }
-         catch (Exception ex)
-         {
+      //   }
+      //   catch (Exception ex)
+      //   {
 
-            return null;
-         }
-      }
+      //      return null;
+      //   }
+      //}
+   }
 }

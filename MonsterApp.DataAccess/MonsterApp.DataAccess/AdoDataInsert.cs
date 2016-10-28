@@ -31,17 +31,27 @@ namespace MonsterApp.DataAccess
          return InsertData(query, name) == 1;
         
       }
+
+      public bool insertMonster(Monster monster)
+      {
+         var name = new SqlParameter("name", monster.Name);
+         var gender = new SqlParameter("GenderId", monster.GenderId);
+         var titleid = new SqlParameter("TitleId", monster.TitleId);
+         var typeid = new SqlParameter("TypeId", monster.TypeId);
+         var picturepath = new SqlParameter("PicturePath", monster.PicturePath);
+         var query = "insert into Monster.Monster (GenderId, TitleId, TypeId, Name, PicturePath, Active) values (@GenderId, @TitleId, @TypeId, @name, @PicturePath, 1)";
+         return InsertData(query, gender, titleid, typeid, name, picturepath)==1;
+      }
+
       private int InsertData(string query, params SqlParameter[] parameters)
       {
          int result;
          using (var connection = new SqlConnection(connectionstring))
-         {
-            
+         {            
             var cmd = new SqlCommand(query, connection);
             connection.Open();
             cmd.Parameters.AddRange(parameters);
-            result = cmd.ExecuteNonQuery();
-            
+            result = cmd.ExecuteNonQuery();            
          }
          return result;
       }

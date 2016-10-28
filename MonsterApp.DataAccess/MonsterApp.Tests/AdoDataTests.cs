@@ -44,12 +44,12 @@ namespace MonsterApp.Tests
             Assert.NotNull(actual);
          }
 
-         [Fact]
-         public void test_getlatestgender()
-      {
-         AdoData data = new AdoData();
-         var actual = data.Getlatestgender();
-         Assert.NotNull(actual);
-      }
+         //[Fact]
+      //   public void test_getlatestgender()
+      //{
+      //   AdoData data = new AdoData();
+      //   var actual = data.Getlatestgender();
+      //   Assert.NotNull(actual);
+      //}
       }   
 }
