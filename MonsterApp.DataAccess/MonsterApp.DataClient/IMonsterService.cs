@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-
+using MonsterApp.DataClient.Models;
 namespace MonsterApp.DataClient
 {
    
@@ -12,7 +12,14 @@ namespace MonsterApp.DataClient
    public interface IMonsterService
    {
       [OperationContract]
-      String DoWork();
+      List<GenderDAO> getGenders();
+
+      [OperationContract]
+      List<MonsterTypeDAO> getMonsterTypes();
+
+      [OperationContract]
+      
+      List<TitleDAO> getTitles();
 
 
    }

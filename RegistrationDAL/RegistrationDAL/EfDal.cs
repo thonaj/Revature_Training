@@ -109,5 +109,43 @@ namespace Registration.DAL
          return db.StudentCourseLists.ToList();
       }
       #endregion
+
+      public bool registerCourse(Student student, Course course)
+      {
+         var register = new StudentCourseList();
+         register.studentID = student.studentID;
+         register.courseID = course.courseID;
+         register.active = true;
+         return insertStudentCourseList(register);
+      }
+      public bool dropCourse(StudentCourseList scl)
+      {
+         scl.active = false;
+         return changeStudentCourseList(scl, EntityState.Modified);
+      }
+      public bool scheduleCourse(Course course)
+      {
+         return changeCourse(course, EntityState.Added);
+      }
+      public bool cancelCourse(Course course)
+      {
+         course.active = false;
+         return changeCourse(course, EntityState.Modified);
+      }
+      public bool modifyCourseTime(Course course, TimeSpan start, TimeSpan end)
+      {
+         course.startTime = start;
+         course.endTime = end;
+         return changeCourse(course, EntityState.Modified);
+      }
+      public bool modifyCourseCapacity(Course course, int capacity)
+      {
+         course.courseCapacity = capacity;
+         return changeCourse(course, EntityState.Modified);
+      }
+      public List<StudentCourseList> listEnrolledStudents(Course course)
+      {
+         return db.StudentCourseLists.Where(s => s.courseID == course.courseID)as List<StudentCourseList>;
+      }
    }
 }
