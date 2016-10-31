@@ -19,7 +19,6 @@ namespace MonsterApp.DataClient
       public List<GenderDAO> getGenders()
       {
          var g = new List<GenderDAO>();
-
          foreach (var gender in data.GetGenders())
          {
             g.Add(GenderMapper.maptoGenderDAO(gender));
@@ -29,12 +28,22 @@ namespace MonsterApp.DataClient
 
       public List<MonsterTypeDAO> getMonsterTypes()
       {
-         throw new NotImplementedException();
+         var g = new List<MonsterTypeDAO>();
+         foreach (var mt in data.GetMonsterType())
+         {
+            g.Add(MonsterTypeMapper.mapToMonsterTypeDAO(mt));
+         }
+         return g;
       }
 
       public List<TitleDAO> getTitles()
       {
-         throw new NotImplementedException();
+         var g = new List<TitleDAO>();
+         foreach (var title in data.GetTitles())
+         {
+            g.Add(TitleMapper.maptoTitleDAO(title));
+         }
+         return g;
       }
    }
 }

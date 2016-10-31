@@ -10,10 +10,10 @@ namespace MonsterApp.DataClient
 {
    public class GenderMapper
    {
-      public static GenderDAO maptoGenderDAO(Gender gender)
+      public static GenderDAO maptoGenderDAO(da.Gender gender)
       {
         var g = new GenderDAO();
-         g.Id = gender.GenderId;
+         g.Id = gender.GenderID;
          g.name = gender.GenderName;
          return g;
       }
@@ -27,9 +27,12 @@ namespace MonsterApp.DataClient
          }
          return ob;
       }
-      //public static Gender mapToGender(GenderDAO gender)
-      //{
-         
-      //}
+      public static da.Gender mapToGender(GenderDAO gender)
+      {
+         var g = new da.Gender();
+         g.GenderID = gender.Id;
+         g.GenderName = gender.name;
+         return g;
+      }
    }
 }

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MonsterApp.DataAccess.Models;
 
 
 namespace MonsterApp.DataAccess
@@ -18,18 +19,18 @@ namespace MonsterApp.DataAccess
       #region methods
 
 
-      public List<Gender> GetGenders()
+      public List<Models.Gender> GetGenders()
       {
          try
          {
             var ds = GetDataDisconnected("select * from Monster.Gender");
-            var genders = new List<Gender>();
+            var genders = new List<Models.Gender>();
 
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-               genders.Add(new Gender
+               genders.Add(new Models.Gender
                {
-                  GenderId = int.Parse(row[0].ToString()),
+                  GenderID = int.Parse(row[0].ToString()),
 
                   GenderName = row[1].ToString(),
                   Active = bool.Parse(row[2].ToString())
@@ -49,16 +50,16 @@ namespace MonsterApp.DataAccess
 
       }
 
-      public List<MonsterType> GetMonsterType()
+      public List<Models.MonsterType> GetMonsterType()
       {
          try
          {
             var ds = GetDataDisconnected("select * from Monster.MonsterType");
-            var monsterTypes = new List<MonsterType>();
+            var monsterTypes = new List<Models.MonsterType>();
 
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-               monsterTypes.Add(new MonsterType
+               monsterTypes.Add(new Models.MonsterType
                {
                   MonsterTypeId = int.Parse(row[0].ToString()),
                   TypeName = row[1].ToString(),
@@ -76,18 +77,18 @@ namespace MonsterApp.DataAccess
 
       }
 
-      public List<Title> GetTitles()
+      public List<Models.Title> GetTitles()
       {
          try
          {
             var ds = GetDataDisconnected("select * from Monster.Title");
-            var titles = new List<Title>();
+            var titles = new List<Models.Title>();
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-               titles.Add(new Title
+               titles.Add(new Models.Title
                {
-                  TitleId = int.Parse(row[0].ToString()),
-                  TitleName = row[1].ToString(),
+                  titleId = int.Parse(row[0].ToString()),
+                  titleName = row[1].ToString(),
                   Active = bool.Parse(row[2].ToString())
                });
             }
@@ -111,37 +112,12 @@ namespace MonsterApp.DataAccess
          {
             cmd = new SqlCommand(query, connection);
             da = new SqlDataAdapter(cmd);
-
-            da.Fill(ds = new DataSet());
+            ds = new DataSet();
+            da.Fill(ds);
          }
 
          return ds;
       }
-      //public List<Gender> Getlatestgender()
-      //{
-      //   try
-      //   {
-      //      var ds = GetDataDisconnected("select * from Monster.Gender where max(GenderId)");
-      //      var genders = new List<Gender>();
-
-      //      foreach (DataRow row in ds.Tables[0].Rows)
-      //      {
-      //         genders.Add(new Gender
-      //         {
-      //            GenderId = int.Parse(row[0].ToString()),
-
-      //            GenderName = row[1].ToString(),
-      //            Active = bool.Parse(row[2].ToString())
-      //         });
-      //      }
-      //      return genders;
-
-      //   }
-      //   catch (Exception ex)
-      //   {
-
-      //      return null;
-      //   }
-      //}
+      
    }
 }

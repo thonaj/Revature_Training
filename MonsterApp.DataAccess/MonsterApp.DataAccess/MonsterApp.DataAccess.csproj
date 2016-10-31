@@ -79,6 +79,7 @@
       <DependentUpon>Monster.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Monster.cs" />
     <Compile Include="Models\MonsterType.cs" />
     <Compile Include="Monster.Context.cs">
       <AutoGen>True</AutoGen>

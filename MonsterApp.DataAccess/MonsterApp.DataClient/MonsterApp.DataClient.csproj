@@ -89,6 +89,7 @@
     </Compile>
     <Compile Include="MonsterTypeMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TitleMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

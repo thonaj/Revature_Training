@@ -5,19 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using m=MonsterApp.DataAccess.Models;
 
 namespace MonsterApp.Tests
 {
    public partial class AdoDataTests
    {
-      private Gender gender;
-      private MonsterType type;
-      private Title title;
+      private m.Gender gender;
+      private m.MonsterType type;
+      private m.Title title;
       public AdoDataTests()
       {
-         gender = new Gender() { GenderName = "Test Gender" };
-         type = new MonsterType() { TypeName= "Test Type"};
-         title = new Title() { TitleName= "test title"};
+         gender = new m.Gender() { GenderName = "Test Gender" };
+         type = new m.MonsterType() { TypeName= "Test Type"};
+         title = new m.Title() { titleName= "test title"};
       }
       [Fact]
       public void Test_InsertGender()

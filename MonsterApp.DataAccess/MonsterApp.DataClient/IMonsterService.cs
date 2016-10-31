@@ -17,8 +17,7 @@ namespace MonsterApp.DataClient
       [OperationContract]
       List<MonsterTypeDAO> getMonsterTypes();
 
-      [OperationContract]
-      
+      [OperationContract]      
       List<TitleDAO> getTitles();
 
 
