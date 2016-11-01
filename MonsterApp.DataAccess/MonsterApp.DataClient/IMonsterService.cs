@@ -20,6 +20,7 @@ namespace MonsterApp.DataClient
       [OperationContract]      
       List<TitleDAO> getTitles();
 
+      
 
    }
 }
