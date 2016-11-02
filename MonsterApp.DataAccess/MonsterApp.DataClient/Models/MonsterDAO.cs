@@ -13,6 +13,7 @@ namespace MonsterApp.DataClient.Models
       public int Id { get; set; }
       [DataMember]
       public string Name { get; set; }
+      [DataMember]
       public GenderDAO gender { get; set; }
    }
 }
