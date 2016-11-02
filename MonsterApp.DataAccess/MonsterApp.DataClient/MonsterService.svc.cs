@@ -15,6 +15,7 @@ namespace MonsterApp.DataClient
    public class MonsterService : IMonsterService
    {
       private AdoData data = new AdoData();
+      private Efdata ef = new Efdata();
       
       public List<GenderDAO> getGenders()
       {
@@ -44,6 +45,13 @@ namespace MonsterApp.DataClient
             g.Add(TitleMapper.maptoTitleDAO(title));
          }
          return g;
+      }
+      public bool insertMonster(MonsterDAO monster)
+      {
+         var m = new Monster();
+         m.Name = monster.Name;
+         m.GenderId = monster.gender.Id;
+         return ef.insertMonster(m);
       }
    }
 }

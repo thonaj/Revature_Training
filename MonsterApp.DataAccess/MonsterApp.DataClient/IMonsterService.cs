@@ -20,7 +20,8 @@ namespace MonsterApp.DataClient
       [OperationContract]      
       List<TitleDAO> getTitles();
 
-      
+      [OperationContract]
+      bool insertMonster(MonsterDAO monster);
 
    }
 }
