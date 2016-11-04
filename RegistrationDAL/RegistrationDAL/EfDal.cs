@@ -17,16 +17,19 @@ namespace Registration.DAL
       #region insert functions
       public bool insertCourse(Course course)
       {
+         course.active = true;
          db.Courses.Add(course);
          return db.SaveChanges()>0;
       }
       public bool insertStudent(Student student)
       {
+         student.active = true;
          db.Students.Add(student);
          return db.SaveChanges() > 0;
       }
       public bool insertStudentCourseList(StudentCourseList scl)
       {
+         scl.active = true;
          db.StudentCourseLists.Add(scl);
          return db.SaveChanges() > 0;
       }
@@ -83,13 +86,13 @@ namespace Registration.DAL
       {
          var entry = db.Entry<Student>(student);
          entry.State = state;
-         return db.SaveChanges() < 0;
+         return db.SaveChanges() > 0;
       }
       private bool changeStudentCourseList(StudentCourseList scl, EntityState state)
       {
          var entry = db.Entry<StudentCourseList>(scl);
          entry.State = state;
-         return db.SaveChanges() < 0;
+         return db.SaveChanges() > 0;
       }
 
 
@@ -100,15 +103,33 @@ namespace Registration.DAL
 
       public List<Course> getCourses()
       {
-         return db.Courses.ToList();
+         List<Course> temp = new List<Course>();
+         foreach (var item in db.Courses.ToList().Where(a => a.active == true))
+         {
+            temp.Add(item);
+         }
+
+         return temp;
       }
       public List<Student> getStudents()
       {
-         return db.Students.ToList();
+         List<Student> temp = new List<Student>();
+         foreach (var item in db.Students.ToList().Where(a => a.active == true))
+         {
+            temp.Add(item);
+         }
+
+         return temp;
       }
       public List<StudentCourseList> getStudentCourseList()
       {
-         return db.StudentCourseLists.ToList();
+         List<StudentCourseList> temp = new List<StudentCourseList>();
+         foreach (var item in db.StudentCourseLists.ToList().Where(a => a.active==true))
+         {
+            temp.Add(item);
+         }
+         
+         return temp; 
       }
       #endregion
 
