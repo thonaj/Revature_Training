@@ -42,7 +42,7 @@ namespace Registration.DAL
          course.active = false;
          return changeCourse(course, EntityState.Modified);
       }
-      public bool updateStuden(Student student)
+      public bool updateStudent(Student student)
       {
          return changeStudent(student, EntityState.Modified);
       }
