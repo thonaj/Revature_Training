@@ -21,6 +21,7 @@ namespace RegistrationWeb.Models
             IsNull(ref _Name, value);
          }
       }
+      
       public CourseDTO() : base()
       {
       }
