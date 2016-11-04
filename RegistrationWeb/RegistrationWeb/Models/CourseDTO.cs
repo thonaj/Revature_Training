@@ -7,7 +7,7 @@ using RegistrationWeb.Logic.Interfaces;
 
 namespace RegistrationWeb.Models
 {
-   class CourseDTO : RegistrationThing
+   public class CourseDTO : RegistrationThing
    {
       private string _Name = default(string);
       public override string Name
@@ -21,7 +21,14 @@ namespace RegistrationWeb.Models
             IsNull(ref _Name, value);
          }
       }
-      
+      public string courseDepartment { get; set; }
+      public int courseCapacity { get; set; }
+      public string courseProfessor { get; set; }
+      public TimeSpan startTime { get; set; }
+      public TimeSpan endTime { get; set; }
+      public Nullable<int> currentEnrollment { get; set; }
+      public int courseCredits { get; set; }
+
       public CourseDTO() : base()
       {
       }

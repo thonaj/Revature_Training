@@ -7,7 +7,7 @@ using RegistrationWeb.Logic.Interfaces;
 
 namespace RegistrationWeb.Models
 {
-   class StudentCourseListDTO : RegistrationThing
+   public class StudentCourseListDTO : RegistrationThing
    {
       private string _Name = default(string);
       public int StudentID { get; set; }

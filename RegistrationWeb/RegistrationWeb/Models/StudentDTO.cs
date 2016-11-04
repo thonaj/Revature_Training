@@ -7,7 +7,7 @@ using RegistrationWeb.Logic.Interfaces;
 
 namespace RegistrationWeb.Models
 {
-   class StudentDTO : RegistrationThing
+   public class StudentDTO : RegistrationThing
    {
       private string _Name = default(string);
       public override string Name
