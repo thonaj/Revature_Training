@@ -14,7 +14,7 @@ namespace RegistrationDAL.Client
    {
 
       [OperationContract]
-      string GetData(int value);
+      public List<CourseDAO> 
 
       
 
