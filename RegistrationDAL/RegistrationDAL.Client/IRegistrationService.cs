@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using RegistrationDAL.Client;
+using RegistrationClient.Models;
 
 namespace RegistrationDAL.Client
 {
@@ -14,44 +16,51 @@ namespace RegistrationDAL.Client
    {
 
       [OperationContract]
-      public List<CourseDAO> 
+      List<CourseDAO> getCourses();
+      [OperationContract]
+      List<StudentDAO> getStudents();
+      [OperationContract]
+      List<StudentCourseListDAO> getStudentCourseList();
+      [OperationContract]
+      bool insertCourse(CourseDAO course);
+      [OperationContract]
+      bool insertStudent(StudentDAO student);
+      [OperationContract]
+      bool insertStudentCourseList(StudentCourseListDAO scl);
+      [OperationContract]
+      bool updateCourse(CourseDAO course);
+      [OperationContract]
+      bool deleteCourse(CourseDAO course);
+      [OperationContract]
+      bool updateStudent(StudentDAO student);
+      [OperationContract]
+      bool deleteStudent(StudentDAO student);
+      [OperationContract]
+      bool updateStudentCourseList(StudentCourseListDAO scl);
+      [OperationContract]
+      bool deleteStudentCourseList(StudentCourseListDAO scl);
+      [OperationContract]
+      bool registerCourse(StudentDAO student, CourseDAO course);
+      [OperationContract]
+      bool dropCourse(StudentCourseListDAO scl);
+      [OperationContract]
+      bool scheduleCourse(CourseDAO course);
+      [OperationContract]
+      bool cancelCourse(CourseDAO course);
+      [OperationContract]
+      bool modifyCourseTime(CourseDAO course, TimeSpan start, TimeSpan end);
+      [OperationContract]
+      bool modifyCourseCapacity(CourseDAO course, int capacity);
+      [OperationContract]
+      List<StudentDAO> listEnrolledStudents(CourseDAO course);
+      [OperationContract]
+      List<CourseDAO> listStudentSchedule(StudentDAO student);
+    
 
-      
 
-      // TODO: Add your service operations here
    }
 
 
    
    
 }
-//public List<Course> getCourses()
-//{
-//   List<Course> temp = new List<Course>();
-//   foreach (var item in db.Courses.ToList().Where(a => a.active == true))
-//   {
-//      temp.Add(item);
-//   }
-
-//   return temp;
-//}
-//public List<Student> getStudents()
-//{
-//   List<Student> temp = new List<Student>();
-//   foreach (var item in db.Students.ToList().Where(a => a.active == true))
-//   {
-//      temp.Add(item);
-//   }
-
-//   return temp;
-//}
-//public List<StudentCourseList> getStudentCourseList()
-//{
-//   List<StudentCourseList> temp = new List<StudentCourseList>();
-//   foreach (var item in db.StudentCourseLists.ToList().Where(a => a.active == true))
-//   {
-//      temp.Add(item);
-//   }
-
-//   return temp;
-//}

@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="RegistrationDAL.Client.Service1" CodeBehind="RegistrationService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RegistrationDAL.Client.RegistrationService" CodeBehind="RegistrationService.svc.cs" %>

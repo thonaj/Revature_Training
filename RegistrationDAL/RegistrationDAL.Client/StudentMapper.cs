@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using RegistrationDAL;
 using RegistrationClient.Models;
 
-namespace RegistrationClient
+namespace RegistrationDAL.Client
 {
    public class StudentMapper
    {
