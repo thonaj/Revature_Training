@@ -18,6 +18,7 @@ namespace RegistrationDAL.Client
          s.lastName = student.lastName;
          s.major = student.major;
          s.studentID = student.studentID;
+         s.active = student.active;
          
          return s;
       }
@@ -29,6 +30,7 @@ namespace RegistrationDAL.Client
          s.lastName = student.lastName;
          s.major = student.major;
          s.studentID = student.studentID;
+         s.active = student.active;
 
          return s;
       }

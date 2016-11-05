@@ -28,5 +28,7 @@ namespace RegistrationClient.Models
       public Nullable<int> currentEnrollment { get; set; }
       [DataMember]
       public int courseCredits { get; set; }
+      [DataMember]
+      public bool active { get; set; }
    }
 }

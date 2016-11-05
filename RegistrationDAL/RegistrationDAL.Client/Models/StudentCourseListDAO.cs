@@ -21,5 +21,7 @@ namespace RegistrationClient.Models
       public virtual CourseDAO Course { get; set; }
       [DataMember]
       public virtual StudentDAO Student { get; set; }
+      [DataMember]
+      public bool active { get; set; }
    }
 }

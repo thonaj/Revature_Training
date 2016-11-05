@@ -20,6 +20,7 @@ namespace RegistrationDAL.Client
          scl.studentID = studentCourseList.studentID;
          //scl.Course = new CourseMapper().MapToCourse(studentCourseList.Course);
          //scl.Student = new StudentMapper().MapToStudent(studentCourseList.Student);
+         scl.active = studentCourseList.active;
 
          return scl;
       }
@@ -32,6 +33,7 @@ namespace RegistrationDAL.Client
          scl.StudentCourseID = studentCourseList.StudentCourseID;
          scl.studentID = studentCourseList.studentID;
          scl.Course = new CourseMapper().MapToCourseDAO(studentCourseList.Course);
+         scl.active = studentCourseList.active;
 
          return scl;
       }

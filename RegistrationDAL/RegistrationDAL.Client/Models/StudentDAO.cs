@@ -20,5 +20,7 @@ namespace RegistrationClient.Models
       public string lastName { get; set; }
       [DataMember]
       public string major { get; set; }
+      [DataMember]
+      public bool active { get; set; }
    }
 }
