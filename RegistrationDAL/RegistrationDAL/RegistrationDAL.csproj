@@ -52,73 +52,73 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Course.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EfDal.cs" />
     <Compile Include="fn_class_schedule_Result.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
     <Compile Include="fn_student_schedule_Result.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrationEntity.Context.cs">
+    <Compile Include="RegistrationDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RegistrationEntity.Context.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="RegistrationEntity.cs">
+    <Compile Include="RegistrationDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="RegistrationEntity.Designer.cs">
+    <Compile Include="RegistrationDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RegistrationEntity.edmx</DependentUpon>
+      <DependentUpon>RegistrationDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Student.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
     <Compile Include="StudentCourseList.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>RegistrationEntity.tt</DependentUpon>
+      <DependentUpon>RegistrationDB.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="RegistrationEntity.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RegistrationEntity.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="packages.config" />
-    <None Include="RegistrationEntity.edmx.diagram">
-      <DependentUpon>RegistrationEntity.edmx</DependentUpon>
+    <EntityDeploy Include="RegistrationDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RegistrationDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="RegistrationDB.edmx.diagram">
+      <DependentUpon>RegistrationDB.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RegistrationEntity.Context.tt">
+    <Content Include="RegistrationDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RegistrationEntity.edmx</DependentUpon>
-      <LastGenOutput>RegistrationEntity.Context.cs</LastGenOutput>
+      <DependentUpon>RegistrationDB.edmx</DependentUpon>
+      <LastGenOutput>RegistrationDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="RegistrationEntity.tt">
+    <Content Include="RegistrationDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RegistrationEntity.edmx</DependentUpon>
-      <LastGenOutput>RegistrationEntity.cs</LastGenOutput>
+      <DependentUpon>RegistrationDB.edmx</DependentUpon>
+      <LastGenOutput>RegistrationDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
