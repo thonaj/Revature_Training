@@ -10,7 +10,7 @@
 namespace RegistrationWeb.Client {
     
     
-    public partial class _default {
+    public partial class student {
         
         /// <summary>
         /// studentlist control.
@@ -20,5 +20,23 @@ namespace RegistrationWeb.Client {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox studentlist;
+        
+        /// <summary>
+        /// courselist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox courselist;
+        
+        /// <summary>
+        /// studentcourselist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox studentcourselist;
     }
 }
