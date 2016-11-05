@@ -25,6 +25,21 @@ namespace RegistrationWeb.Mappings
 
          return c;
       }
+      public CourseDAO mapToCourseDAO(CourseDTO course, CourseDAO c)
+      {
+         
+         c.courseCapacity = course.courseCapacity;
+         c.courseCredits = course.courseCredits;
+         c.courseDept = course.courseDepartment;
+         c.courseID = course.AppId;
+         c.courseName = course.Name;
+         c.courseProfessor = course.courseProfessor;
+         c.currentEnrollment = course.currentEnrollment;
+         c.endTime = course.endTime;
+         c.startTime = course.startTime;
+
+         return c;
+      }
       public CourseDTO mapToCourseDTO(CourseDAO course)
       {
          var c = new CourseDTO();
@@ -38,6 +53,21 @@ namespace RegistrationWeb.Mappings
          c.Name = course.courseName;
          c.startTime = course.startTime;
          
+         return c;
+      }
+      public CourseDTO mapToCourseDTO(CourseDAO course,CourseDTO c)
+      {
+         
+         c.AppId = course.courseID;
+         c.courseCapacity = course.courseCapacity;
+         c.courseCredits = course.courseCredits;
+         c.courseDepartment = course.courseDept;
+         c.courseProfessor = course.courseProfessor;
+         c.currentEnrollment = course.currentEnrollment;
+         c.endTime = course.endTime;
+         c.Name = course.courseName;
+         c.startTime = course.startTime;
+
          return c;
       }
    }

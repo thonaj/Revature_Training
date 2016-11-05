@@ -19,9 +19,28 @@ namespace RegistrationWeb.Mappings
          
          return sc;
       }
+      public StudentCourseListDAO mapToStudentCourseListDAO(StudentCourseListDTO scl, StudentCourseListDAO sc)
+      {
+         
+         sc.courseID = scl.courseID;
+         sc.StudentCourseID = scl.AppId;
+         sc.studentID = scl.StudentID;
+
+         return sc;
+      }
+
       public StudentCourseListDTO mapToStudentCourseListDTO(StudentCourseListDAO scl)
       {
          var sc = new StudentCourseListDTO();
+         sc.AppId = scl.StudentCourseID;
+         sc.courseID = scl.courseID;
+         sc.Name = scl.Course.courseName + "_" + scl.Student.firstName + "_" + scl.Student.lastName;
+         sc.StudentID = scl.studentID;
+         return sc;
+      }
+      public StudentCourseListDTO mapToStudentCourseListDTO(StudentCourseListDAO scl, StudentCourseListDTO sc)
+      {
+         
          sc.AppId = scl.StudentCourseID;
          sc.courseID = scl.courseID;
          sc.Name = scl.Course.courseName + "_" + scl.Student.firstName + "_" + scl.Student.lastName;
