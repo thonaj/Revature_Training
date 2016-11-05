@@ -68,6 +68,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="modifycoursecapacity.aspx" />
+    <Content Include="modifycoursetime.aspx" />
     <Content Include="packages.config" />
     <None Include="Service References\RegistrationService\RegistrationService.xsd">
       <SubType>Designer</SubType>
@@ -117,6 +119,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="modifycoursecapacity.aspx.cs">
+      <DependentUpon>modifycoursecapacity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modifycoursecapacity.aspx.designer.cs">
+      <DependentUpon>modifycoursecapacity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modifycoursetime.aspx.cs">
+      <DependentUpon>modifycoursetime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modifycoursetime.aspx.designer.cs">
+      <DependentUpon>modifycoursetime.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrar.aspx.cs">

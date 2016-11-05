@@ -86,5 +86,21 @@ namespace RegistrationWeb.Logic
       {
          return rsc.deleteStudentCourseList(new StudentCourseListMapper().mapToStudentCourseListDAO(scl));
       }
+      public bool addCourse(CourseDTO course)
+      {
+         return rsc.insertCourse(new CourseMapper().mapToCourseDAO(course));
+      }
+      public bool addStudent(StudentDTO student)
+      {
+         return rsc.insertStudent(new StudentMapper().mapToStudentDAO(student));
+      }
+      public bool modifyCourseTime(CourseDTO course, TimeSpan start, TimeSpan end)
+      {
+         return rsc.modifyCourseTime(new CourseMapper().mapToCourseDAO(course), start, end);
+      }
+      public bool modifyCourseCapacity(CourseDTO course, int capacity)
+      {
+         return rsc.modifyCourseCapacity(new CourseMapper().mapToCourseDAO(course), capacity);
+      }
    }
 }

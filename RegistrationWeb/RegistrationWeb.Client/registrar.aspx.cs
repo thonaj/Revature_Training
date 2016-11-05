@@ -206,5 +206,26 @@ namespace RegistrationWeb.Client
          sclgrid.DataSource = data.getStudentCourseList();
          sclgrid.DataBind();
       }
+
+      protected void addcoursebutton_Click(object sender, EventArgs e)
+      {
+         
+
+      }
+
+      protected void addstudentbutton_Click(object sender, EventArgs e)
+      {
+
+      }
+
+      protected void modifycoursetime_Click(object sender, EventArgs e)
+      {
+
+      }
+
+      protected void modifycoursecapacity_Click(object sender, EventArgs e)
+      {
+
+      }
    }
 }

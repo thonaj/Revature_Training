@@ -85,6 +85,42 @@ namespace RegistrationWeb.Client {
         protected global::System.Web.UI.WebControls.Button viewCourseEnrollment;
         
         /// <summary>
+        /// addcoursebutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addcoursebutton;
+        
+        /// <summary>
+        /// addstudentbutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addstudentbutton;
+        
+        /// <summary>
+        /// modifycoursetime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button modifycoursetime;
+        
+        /// <summary>
+        /// modifycoursecapacity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button modifycoursecapacity;
+        
+        /// <summary>
         /// grid control.
         /// </summary>
         /// <remarks>

@@ -19,6 +19,13 @@
        <asp:Button  ID="viewCourseEnrollment" Text="View Course Enrollment" OnClick="viewCourseEnrollment_Click" runat="server" Width="15%"/>
       </div>
       <div>
+       <asp:Button  ID="addcoursebutton" Text="Add Course" OnClick="addcoursebutton_Click" runat="server" Width="20%"/>
+       <asp:Button  ID="addstudentbutton" Text="Add Student" OnClick="addstudentbutton_Click" runat="server" Width="20%"/>
+       <asp:Button  ID="modifycoursetime" Text="Change Course Time" OnClick="modifycoursetime_Click" runat="server" Width="20%"/>
+       <asp:Button  ID="modifycoursecapacity" Text="Change Course Capacity" OnClick="modifycoursecapacity_Click" runat="server" Width="20%"/>
+      </div>
+      
+      <div>
          
          <asp:GridView runat="server" ID="grid" AutoGenerateColumns="false"  OnRowDataBound="grid_RowDataBound" OnRowCreated="grid_RowCreated" OnSelectedIndexChanged="grid_SelectedIndexChanged" >
             <Columns>
@@ -33,7 +40,10 @@
               <asp:BoundField HeaderText="Course ID" DataField="AppId" ReadOnly="true" />
               <asp:BoundField HeaderText="Course Name" DataField="Name" />
               <asp:BoundField HeaderText="Course Department" DataField="courseDepartment" />
-              <asp:BoundField HeaderText="Current Enrollment" DataField="currentEnrollment" />              
+              <asp:BoundField HeaderText="Current Enrollment" DataField="currentEnrollment" />  
+              <asp:BoundField HeaderText="Course Capacity" DataField="courseCapacity" />
+              <asp:BoundField HeaderText="Start Time" DataField="startTime" />      
+              <asp:BoundField HeaderText="End Time" DataField="endTime" />                          
             </Columns>
          </asp:GridView>
          <asp:GridView runat="server" ID="sclgrid" AutoGenerateColumns="false" OnRowDataBound="sclgrid_RowDataBound" OnRowCreated="sclgrid_RowCreated" OnSelectedIndexChanged="sclgrid_SelectedIndexChanged">
