@@ -13,13 +13,13 @@ namespace RegistrationDAL.Client
       public StudentCourseList MapToStudentCourseList(StudentCourseListDAO studentCourseList)
       {
          var scl = new StudentCourseList();
-         scl.Course = new CourseMapper().MapToCourse(studentCourseList.Course);
+         //scl.Course = new CourseMapper().MapToCourse(studentCourseList.Course);
          scl.courseID = studentCourseList.courseID;
-         scl.Student = new StudentMapper().MapToStudent(studentCourseList.Student);
+         //scl.Student = new StudentMapper().MapToStudent(studentCourseList.Student);
          scl.StudentCourseID = studentCourseList.StudentCourseID;
          scl.studentID = studentCourseList.studentID;
-         scl.Course = new CourseMapper().MapToCourse(studentCourseList.Course);
-         scl.Student = new StudentMapper().MapToStudent(studentCourseList.Student);
+         //scl.Course = new CourseMapper().MapToCourse(studentCourseList.Course);
+         //scl.Student = new StudentMapper().MapToStudent(studentCourseList.Student);
 
          return scl;
       }

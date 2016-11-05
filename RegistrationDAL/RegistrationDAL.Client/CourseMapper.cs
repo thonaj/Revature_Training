@@ -22,6 +22,7 @@ namespace RegistrationDAL.Client
          c.currentEnrollment = course.currentEnrollment;
          c.endTime = course.endTime;
          c.startTime = course.startTime;
+         
 
          return c;
       }
