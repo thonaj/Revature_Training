@@ -18,6 +18,8 @@ namespace RegistrationDAL.Client
          scl.Student = new StudentMapper().MapToStudent(studentCourseList.Student);
          scl.StudentCourseID = studentCourseList.StudentCourseID;
          scl.studentID = studentCourseList.studentID;
+         scl.Course = new CourseMapper().MapToCourse(studentCourseList.Course);
+         scl.Student = new StudentMapper().MapToStudent(studentCourseList.Student);
 
          return scl;
       }
@@ -29,6 +31,7 @@ namespace RegistrationDAL.Client
          scl.Student = new StudentMapper().MapToStudentDAO(studentCourseList.Student);
          scl.StudentCourseID = studentCourseList.StudentCourseID;
          scl.studentID = studentCourseList.studentID;
+         scl.Course = new CourseMapper().MapToCourseDAO(studentCourseList.Course);
 
          return scl;
       }
