@@ -16,6 +16,7 @@ namespace RegistrationWeb.Logic
       private FactoryThing<StudentDTO> studentFactory = new FactoryThing<StudentDTO>();
       private FactoryThing<CourseDTO> courseFactory = new FactoryThing<CourseDTO>();
       private FactoryThing<StudentCourseListDTO> sclFactory = new FactoryThing<StudentCourseListDTO>();
+     
       public List<StudentDTO> getStudents()
       {
          List<StudentDTO> students = new List<StudentDTO>();
@@ -50,6 +51,40 @@ namespace RegistrationWeb.Logic
             scl.Add(s);
          }
          return scl;
+      }
+      public List<CourseDTO> listStudentSchedule(StudentDTO student)
+      {
+         List<CourseDTO> list = new List<CourseDTO>();
+         foreach (var item in rsc.listStudentSchedule(new StudentMapper().mapToStudentDAO(student)))
+         {
+            var createdcourse = courseFactory.Create();
+            var mappedcourse = new CourseMapper().mapToCourseDTO(item, createdcourse);
+            list.Add(mappedcourse);
+         }
+         return list;
+      }
+      public List<StudentDTO> listEnrolledStudents(CourseDTO course)
+      {
+         List<StudentDTO> list = new List<StudentDTO>();
+         foreach (var item in rsc.listEnrolledStudents(new CourseMapper().mapToCourseDAO(course)))
+         {
+            var createdstudent = studentFactory.Create();
+            var mappedstudent = new StudentMapper().mapToStudentDTO(item, createdstudent);
+            list.Add(mappedstudent);
+         }
+         return list;
+      }
+      public bool deleteStudent(StudentDTO student)
+      {
+         return rsc.deleteStudent(new StudentMapper().mapToStudentDAO(student));
+      }
+      public bool deleteCourse(CourseDTO course)
+      {
+         return rsc.deleteCourse(new CourseMapper().mapToCourseDAO(course));
+      }
+      public bool deletestudentcourseenrollment(StudentCourseListDTO scl)
+      {
+         return rsc.deleteStudentCourseList(new StudentCourseListMapper().mapToStudentCourseListDAO(scl));
       }
    }
 }

@@ -96,6 +96,8 @@
     </None>
     <Content Include="student.aspx" />
     <Content Include="Style.css" />
+    <Content Include="viewcourseenrollment.aspx" />
+    <Content Include="viewstudentschedule.aspx" />
     <Content Include="Web.config" />
     <None Include="Service References\RegistrationService\RegistrationService.wsdl" />
     <None Include="Service References\RegistrationService\RegistrationService1.xsd">
@@ -142,6 +144,20 @@
     </Compile>
     <Compile Include="student.aspx.designer.cs">
       <DependentUpon>student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewcourseenrollment.aspx.cs">
+      <DependentUpon>viewcourseenrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewcourseenrollment.aspx.designer.cs">
+      <DependentUpon>viewcourseenrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewstudentschedule.aspx.cs">
+      <DependentUpon>viewstudentschedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewstudentschedule.aspx.designer.cs">
+      <DependentUpon>viewstudentschedule.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
