@@ -102,5 +102,9 @@ namespace RegistrationWeb.Logic
       {
          return rsc.modifyCourseCapacity(new CourseMapper().mapToCourseDAO(course), capacity);
       }
+      public bool registerCourse(StudentCourseListDTO scl)
+      {
+         return rsc.insertStudentCourseList(new StudentCourseListMapper().mapToStudentCourseListDAO(scl));
+      }
    }
 }

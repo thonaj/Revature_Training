@@ -28,6 +28,7 @@ namespace RegistrationWeb.Models
       public TimeSpan endTime { get; set; }
       public Nullable<int> currentEnrollment { get; set; }
       public int courseCredits { get; set; }
+      public bool Active { get; set; }
 
       public CourseDTO() : base()
       {

@@ -11,5 +11,50 @@ namespace RegistrationWeb.Client {
     
     
     public partial class modifycoursecapacity {
+        
+        /// <summary>
+        /// changecapacitylabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label changecapacitylabel;
+        
+        /// <summary>
+        /// capacitylabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label capacitylabel;
+        
+        /// <summary>
+        /// capacitytextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox capacitytextbox;
+        
+        /// <summary>
+        /// coursegrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView coursegrid;
+        
+        /// <summary>
+        /// changecapacitybutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button changecapacitybutton;
     }
 }

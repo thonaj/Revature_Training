@@ -23,6 +23,9 @@ namespace RegistrationWeb.RegistrationService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool activeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int courseCapacityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -56,6 +59,19 @@ namespace RegistrationWeb.RegistrationService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active {
+            get {
+                return this.activeField;
+            }
+            set {
+                if ((this.activeField.Equals(value) != true)) {
+                    this.activeField = value;
+                    this.RaisePropertyChanged("active");
+                }
             }
         }
         
@@ -196,6 +212,9 @@ namespace RegistrationWeb.RegistrationService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool activeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string firstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -217,6 +236,19 @@ namespace RegistrationWeb.RegistrationService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active {
+            get {
+                return this.activeField;
+            }
+            set {
+                if ((this.activeField.Equals(value) != true)) {
+                    this.activeField = value;
+                    this.RaisePropertyChanged("active");
+                }
             }
         }
         
@@ -314,6 +346,9 @@ namespace RegistrationWeb.RegistrationService {
         private int StudentCourseIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool activeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int courseIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -364,6 +399,19 @@ namespace RegistrationWeb.RegistrationService {
                 if ((this.StudentCourseIDField.Equals(value) != true)) {
                     this.StudentCourseIDField = value;
                     this.RaisePropertyChanged("StudentCourseID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool active {
+            get {
+                return this.activeField;
+            }
+            set {
+                if ((this.activeField.Equals(value) != true)) {
+                    this.activeField = value;
+                    this.RaisePropertyChanged("active");
                 }
             }
         }

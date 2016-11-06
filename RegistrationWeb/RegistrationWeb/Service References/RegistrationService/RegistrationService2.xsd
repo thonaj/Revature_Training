@@ -9,6 +9,7 @@
   <xs:element name="ArrayOfCourseDAO" nillable="true" type="tns:ArrayOfCourseDAO" />
   <xs:complexType name="CourseDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="active" type="xs:boolean" />
       <xs:element minOccurs="0" name="courseCapacity" type="xs:int" />
       <xs:element minOccurs="0" name="courseCredits" type="xs:int" />
       <xs:element minOccurs="0" name="courseDept" nillable="true" type="xs:string" />
@@ -29,6 +30,7 @@
   <xs:element name="ArrayOfStudentDAO" nillable="true" type="tns:ArrayOfStudentDAO" />
   <xs:complexType name="StudentDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="active" type="xs:boolean" />
       <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="major" nillable="true" type="xs:string" />
@@ -48,6 +50,7 @@
       <xs:element minOccurs="0" name="Course" nillable="true" type="tns:CourseDAO" />
       <xs:element minOccurs="0" name="Student" nillable="true" type="tns:StudentDAO" />
       <xs:element minOccurs="0" name="StudentCourseID" type="xs:int" />
+      <xs:element minOccurs="0" name="active" type="xs:boolean" />
       <xs:element minOccurs="0" name="courseID" type="xs:int" />
       <xs:element minOccurs="0" name="studentID" type="xs:int" />
     </xs:sequence>

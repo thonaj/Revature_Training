@@ -25,6 +25,7 @@ namespace RegistrationWeb.Models
       public string middleName { get; set; }
       public string lastName { get; set; }
       public string major { get; set; }
+      public bool Active { get; set; }
       public StudentDTO() : base()
       {
       }

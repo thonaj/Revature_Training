@@ -10,78 +10,96 @@
 namespace RegistrationWeb.Client {
     
     
-    public partial class student {
+    public partial class addstudent {
         
         /// <summary>
-        /// studentlabel control.
+        /// addstudentlabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label studentlabel;
+        protected global::System.Web.UI.WebControls.Label addstudentlabel;
         
         /// <summary>
-        /// grid control.
+        /// firstlabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grid;
+        protected global::System.Web.UI.WebControls.Label firstlabel;
         
         /// <summary>
-        /// coursegrid control.
+        /// firstbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView coursegrid;
+        protected global::System.Web.UI.WebControls.TextBox firstbox;
         
         /// <summary>
-        /// registerbutton control.
+        /// middlelabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerbutton;
+        protected global::System.Web.UI.WebControls.Label middlelabel;
         
         /// <summary>
-        /// dropbutton control.
+        /// middlebox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button dropbutton;
+        protected global::System.Web.UI.WebControls.TextBox middlebox;
         
         /// <summary>
-        /// addtocartbutton control.
+        /// lastlabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addtocartbutton;
+        protected global::System.Web.UI.WebControls.Label lastlabel;
         
         /// <summary>
-        /// sclgrid control.
+        /// lastbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView sclgrid;
+        protected global::System.Web.UI.WebControls.TextBox lastbox;
         
         /// <summary>
-        /// cartlist control.
+        /// majorlabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox cartlist;
+        protected global::System.Web.UI.WebControls.Label majorlabel;
+        
+        /// <summary>
+        /// majorbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox majorbox;
+        
+        /// <summary>
+        /// addstudentbutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addstudentbutton;
     }
 }

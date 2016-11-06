@@ -16,7 +16,7 @@ namespace RegistrationWeb.Client
 
       protected void studentButton_Click(object sender, EventArgs e)
       {
-         Response.Redirect("~/student.aspx");
+         Response.Redirect("default.aspx");
       }
 
       protected void registrarButton_Click(object sender, EventArgs e)

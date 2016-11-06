@@ -22,6 +22,7 @@ namespace RegistrationWeb.Mappings
          c.currentEnrollment = course.currentEnrollment;
          c.endTime = course.endTime;
          c.startTime = course.startTime;
+         c.active = course.Active;
 
          return c;
       }
@@ -37,6 +38,7 @@ namespace RegistrationWeb.Mappings
          c.currentEnrollment = course.currentEnrollment;
          c.endTime = course.endTime;
          c.startTime = course.startTime;
+         c.active = course.Active;
 
          return c;
       }
@@ -52,6 +54,7 @@ namespace RegistrationWeb.Mappings
          c.endTime = course.endTime;
          c.Name = course.courseName;
          c.startTime = course.startTime;
+         c.Active = course.active;
          
          return c;
       }
@@ -67,6 +70,7 @@ namespace RegistrationWeb.Mappings
          c.endTime = course.endTime;
          c.Name = course.courseName;
          c.startTime = course.startTime;
+         c.Active = course.active;
 
          return c;
       }

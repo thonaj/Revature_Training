@@ -16,6 +16,7 @@ namespace RegistrationWeb.Mappings
          sc.courseID = scl.courseID;
          sc.StudentCourseID = scl.AppId;         
          sc.studentID = scl.StudentID;
+         sc.active = scl.Active;
          
          return sc;
       }
@@ -25,6 +26,7 @@ namespace RegistrationWeb.Mappings
          sc.courseID = scl.courseID;
          sc.StudentCourseID = scl.AppId;
          sc.studentID = scl.StudentID;
+         sc.active = scl.Active;
 
          return sc;
       }
@@ -36,6 +38,7 @@ namespace RegistrationWeb.Mappings
          sc.courseID = scl.courseID;
          sc.Name = scl.Course.courseName + "_" + scl.Student.firstName + "_" + scl.Student.lastName;
          sc.StudentID = scl.studentID;
+         sc.Active = scl.active;
          return sc;
       }
       public StudentCourseListDTO mapToStudentCourseListDTO(StudentCourseListDAO scl, StudentCourseListDTO sc)
@@ -45,6 +48,7 @@ namespace RegistrationWeb.Mappings
          sc.courseID = scl.courseID;
          sc.Name = scl.Course.courseName + "_" + scl.Student.firstName + "_" + scl.Student.lastName;
          sc.StudentID = scl.studentID;
+         sc.Active = scl.active;
          return sc;
       }
    }

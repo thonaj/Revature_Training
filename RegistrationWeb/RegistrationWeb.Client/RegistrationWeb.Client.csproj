@@ -68,6 +68,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addcourse.aspx" />
+    <Content Include="addstudent.aspx" />
     <Content Include="modifycoursecapacity.aspx" />
     <Content Include="modifycoursetime.aspx" />
     <Content Include="packages.config" />
@@ -110,6 +112,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addcourse.aspx.cs">
+      <DependentUpon>addcourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addcourse.aspx.designer.cs">
+      <DependentUpon>addcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addstudent.aspx.cs">
+      <DependentUpon>addstudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addstudent.aspx.designer.cs">
+      <DependentUpon>addstudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

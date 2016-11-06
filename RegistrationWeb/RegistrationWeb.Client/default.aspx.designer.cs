@@ -13,12 +13,21 @@ namespace RegistrationWeb.Client {
     public partial class _default {
         
         /// <summary>
-        /// studentlist control.
+        /// grid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox studentlist;
+        protected global::System.Web.UI.WebControls.GridView grid;
+        
+        /// <summary>
+        /// selectbutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button selectbutton;
     }
 }

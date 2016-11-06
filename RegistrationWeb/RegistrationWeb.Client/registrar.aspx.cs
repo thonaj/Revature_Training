@@ -16,7 +16,6 @@ namespace RegistrationWeb.Client
       {
 
          if (!IsPostBack)
-
          {
             getStudents();
             getCourses();
@@ -209,23 +208,23 @@ namespace RegistrationWeb.Client
 
       protected void addcoursebutton_Click(object sender, EventArgs e)
       {
-         
+         Response.Redirect("addcourse.aspx");
 
       }
 
       protected void addstudentbutton_Click(object sender, EventArgs e)
       {
-
+         Response.Redirect("addstudent.aspx");
       }
 
       protected void modifycoursetime_Click(object sender, EventArgs e)
       {
-
+         Response.Redirect("modifycoursetime.aspx");
       }
 
       protected void modifycoursecapacity_Click(object sender, EventArgs e)
       {
-
+         Response.Redirect("modifycoursecapacity.aspx");
       }
    }
 }

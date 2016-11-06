@@ -21,8 +21,8 @@
       <div>
        <asp:Button  ID="addcoursebutton" Text="Add Course" OnClick="addcoursebutton_Click" runat="server" Width="20%"/>
        <asp:Button  ID="addstudentbutton" Text="Add Student" OnClick="addstudentbutton_Click" runat="server" Width="20%"/>
-       <asp:Button  ID="modifycoursetime" Text="Change Course Time" OnClick="modifycoursetime_Click" runat="server" Width="20%"/>
-       <asp:Button  ID="modifycoursecapacity" Text="Change Course Capacity" OnClick="modifycoursecapacity_Click" runat="server" Width="20%"/>
+       <asp:Button  ID="modifycoursetime" Text="Go To Course Time Page" OnClick="modifycoursetime_Click" runat="server" Width="20%"/>
+       <asp:Button  ID="modifycoursecapacity" Text="Go To Change Capacity Page" OnClick="modifycoursecapacity_Click" runat="server" Width="20%"/>
       </div>
       
       <div>

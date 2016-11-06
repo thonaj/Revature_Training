@@ -12,6 +12,7 @@ namespace RegistrationWeb.Models
       private string _Name = default(string);
       public int StudentID { get; set; }
       public int courseID { get; set; }
+      public bool Active { get; set; }
       public override string Name
       {
          get
