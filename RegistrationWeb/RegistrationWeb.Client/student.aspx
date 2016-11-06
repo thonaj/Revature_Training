@@ -48,7 +48,7 @@
 
       </div>
       <div>
-         <asp:listbox runat="server" ID="cartlist" ClientIDMode="Static" Width="15%"></asp:listbox>
+         <asp:datalist runat="server" ID="cartlist" ClientIDMode="Static" Width="15%"></asp:datalist>
       </div>
    </div>
 </asp:Content>

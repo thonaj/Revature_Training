@@ -19,21 +19,19 @@ namespace RegistrationWeb.Client
       {
          if (!IsPostBack)
          {
-            oldgrid = Session.Contents[0] as GridView;
-            
+            oldgrid = Session.Contents[0] as GridView;            
             getstudentsintogrid();
             getcoursesintocoursegrid();
             fillsclgrid();
             updateSessionContents();
             fillcart();
-            grid.SelectRow(0);
-            
+            grid.SelectRow(0);            
+         }         
+         if(IsPostBack)
+         {
+            fillcart();
          }
-         
-      }
-      
-      
-      
+      }      
 
       protected void coursegrid_RowCreated(object sender, GridViewRowEventArgs e)
       {
@@ -68,8 +66,7 @@ namespace RegistrationWeb.Client
          Session.Contents.Add("grid", grid);
          Session.Contents.Add("coursegrid", coursegrid);
          Session.Contents.Add("sclgrid", sclgrid);
-
-
+         
       }
 
       protected void grid_RowCreated(object sender, GridViewRowEventArgs e)
@@ -95,12 +92,9 @@ namespace RegistrationWeb.Client
          updateSessionContents();
       }
       private void getstudentsintogrid()
-      {
-         
-         
+      {         
          grid.DataSource = data.getStudents().Where(s => s.AppId==int.Parse(oldgrid.SelectedRow.Cells[0].Text));
          grid.DataBind();
-
       }
 
       protected void registerbutton_Click(object sender, EventArgs e)
@@ -155,23 +149,25 @@ namespace RegistrationWeb.Client
       protected void addtocartbutton_Click(object sender, EventArgs e)
       {
          cart.Add(coursegrid.SelectedRow.Cells[1].Text + " " + coursegrid.SelectedRow.Cells[2].Text);
-         fillcart();
+         cartlist.DataBind();
          
          Response.Redirect(Request.RawUrl);
+
       }
       protected void fillcart()
       {
-         cartlist.Items.Clear();
-         foreach (var item in cart)
-         {
-            cartlist.Items.Add(item);
+         cartlist.DataSource = cart;
+         cartlist.DataBind();
+         //foreach (var item in cart)
+         //{
+         //   cartlist.Items.Add(item);
 
-         }
-         
+         //}
+
       }
 
-     
 
-      
+
+
    }
 }
